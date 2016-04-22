@@ -1,0 +1,40 @@
+{# load the tag library #}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>{{website_title}}</title>
+    <link rel="shortcut icon" href="/static/img/favicon.ico"/>
+    <link rel="bookmark" href="/static/img/favicon.ico"/>
+    {# load css and javascript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery=1 %}
+    <link rel="stylesheet" href="/static/css/vmaig.css">
+    <link rel="stylesheet" href="/static/css/vmaig_comments.css">
+    <link rel="stylesheet" href="/static/css/vmaig_auth.css">
+    {% block css%} {% endblock%}
+</head>
+<body id="vmaig">
+    <!-- 导航栏 -->
+    {% include "./datacenter/include/nav.html"%}
+    <!-- 文章列表 与 侧边的东西 -->
+    <div id="vmaig-main">
+        <div id="vmaig-content" class="container">
+            {%block main%} {% endblock %}
+        </div>
+        <footer>
+           <div class="container">
+               <p class="text-center"> Power By django1.9.5,django-bootsratp3 </p>
+           </div>
+        </footer>
+    </div>
+
+</body>
+
+
+<script type="text/javascript" src="/static/js/vmaig.js"></script>
+{% block js%}{% endblock%}
+
+</html>
