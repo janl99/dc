@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'judicial_datacenter',
         'USER': 'root',
-        'PASSWORD': 'shanlitech.com',
+        'PASSWORD': 'uj81u1123456',
     }
 }
 

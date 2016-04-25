@@ -1,8 +1,13 @@
 {% extends "./datacenter/base.html" %}
 
 {%block main%}
-<div class="row" style = "background-img:url(/static/datacenter/img/bg.jpg)">
-  <h1>this's Datacenter index page.</h1>
-
+<div class="row" >
+    <div id = "datacenter-content" class = "col-md-8 col-lg-9">
+       <!-- alert box -->
+       <div class = "well alert hidden-xs fade in">
+          <button class = "close" data-dismiss = "alert" type = "button">&times;</button>
+          {{website_welcome}}
+       </div>
+    </div>
 </div>
 {% endblock %}

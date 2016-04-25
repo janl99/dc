@@ -1,9 +1,10 @@
 from django.conf.urls import url
 
-from . import views
+from datacenter.views import (IndexView)
+from django.views.generic import TemplateView,DetailView
 
 urlpatterns = [
 
-    url(r'^$',views.index,name='index'),
+    url(r'^$',IndexView.as_view(),name='index-view'),
 
     ]

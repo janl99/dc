@@ -1,0 +1,187 @@
+html, body{ overflow-x: hidden; overflow-y: auto;}
+
+body {
+    font-family:"Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
+    color:#6B6B6B;
+    font-size:12px;
+    background:url('../img/bg.jpg') repeat scroll 0% 0% transparent;
+}
+
+header {
+    font-size:14px;
+}
+
+/*使footer置于底部*/
+body,html {
+    margin: 0;
+    padding: 0;
+    height:100%;
+}
+
+#datacenter{
+    padding-top:50px;
+}
+
+#datacenter-main {
+    padding:30px 0px;
+    position: relative;
+    min-height:100%;
+    _height:100%; /* for ie6 因为ie6不支持min-height */
+}
+
+#datacenter-content {
+    padding: 10px;
+    padding-bottom: 30px;  /* 不至被footer盖住 */
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 30px;
+    width: 100%;
+    background:#ccc;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+    background-color: #222;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family:"Microsoft YaHei","WenQuanYi Micro Hei","tohoma,sans-serif";
+    font-weight: 700;
+}
+
+a {
+    color:#4C4C4C;
+}
+
+a:focus{
+    color:#D9534F;
+    text-decoration:none;
+}
+
+a:hover{
+    color:#D9534F;
+    text-decoration:none;
+}
+
+.display-none {
+    display:none;
+}
+
+.datacenter-header.navbar{ 
+    font-size:14px;
+}
+
+.navbar-datacenter .navbar-brand{
+    font-weight:bold;
+    font-size:25px;
+    margin-right:10px;
+    color:#000;
+    text-shadow: 1px 2px 5px rgba(255, 255, 255, 0.1), 0px 0px 30px rgba(255, 255, 255, 0.125);
+}
+
+.well {
+    background-color:#FFF;
+    box-shadow:0px 0px 20px #222;
+}
+
+.padding10 {
+    padding:10px;
+}
+
+.margin4 {
+    margin:4px;
+}
+
+/*向左移动20px*/
+.left20px{
+    margin-left:-20px;
+}
+
+/*下滑线*/
+.underline{
+    border-bottom:1px solid #eee;
+}
+
+/*标签样式*/
+.label-vmaig{
+    background-color:#D94600;
+}
+
+.label-vmaig{
+    background-color:#D94600;
+}
+
+/*按钮样式*/
+.btn-vmaig{
+    color: #FFF;
+    background-color: #D9534F;
+    border-color: #D43F3A;
+}
+
+/*label样式*/
+.label-vmaig-1 {
+    background-color: #428bca;
+}
+
+.label-vmaig-2 {
+    background-color: #5cb85c;
+}
+
+.label-vmaig-3 {
+    background-color: #f0ad4e;
+}
+
+.label-vmaig-4 {
+    background-color: #5bc0de;
+}
+
+.label-vmaig-5 {
+    background-color: #d9534f;
+}
+
+.label-vmaig-6 {
+    background-color: #999;
+}
+
+
+/*警告框样式*/
+.alert-datacenter{
+    color: #8A6D3B;
+    background-color: #FCF8E3;
+    border-color: #FAEBCC;
+    margin-bottom:5px;
+}
+
+/*panel 样式*/
+.panel-datacenter{
+    box-shadow: 0px 0px 5px #C2C2C2;
+    border-color:#EEE;
+}
+
+.panel-datacenter .panel-heading{
+    color: #EEE;
+    background-color: #222;
+    border-color: #EEE;
+}
+
+.panel-datacenter .input-group-addon{
+    color: #EEE;
+    background-color: #3D4450;
+    border:2px solid #3D4450;
+}
+
+.panel-datacenter .badge{
+    background-color:#D94600;
+}
+
+.panel-datacenter span.btn{
+    padding:0px;
+    margin-right:5px;
+}
+
+
+
+
+
