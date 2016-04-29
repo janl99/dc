@@ -5,6 +5,7 @@
 {% url 'user-view' 'changetx' as changetx_url %}
 {% url 'user-view' 'changepassword' as changepassword_url %}
 {% url 'user-view' 'notification' as notification_url %}
+
 <header id="datacenter-header" class="navbar navbar-inverse navbar-fixed-top navbar-datacenter">
     <div class="container">
         <div class="navbar-header">
@@ -64,22 +65,22 @@
                 <li class="dropdown">
                 <a href="javascript:;" style="padding:5px;" data-toggle="dropdown">
                         <img src="{{user.img}}" alt="" width="40">
-                        &nbsp;user.username
-                        <span class="badge" style="background-color: #D94600;">notification_count</span>
+                        &nbsp;{{user.username}}
+                        <span class="badge" style="background-color: #D94600;">{{notification_count}}</span>
                 </a>
                 <ul class="dropdown-menu navbar-right">
-                    <li><a href="changetx_url">
+                      <li><a href="{{changetx_url}}">
                         <span class="glyphicon glyphicon-user"></span>
                         更改头像</a></li>
-                    <li><a href="changepassword_url">
+                      <li><a href="{{changepassword_url}}">
                         <span class="glyphicon glyphicon-lock"></span>
                         更改密码</a></li>
-                    <li><a href="notification_url">
+                      <li><a href="{{notification_url}}">
                         <span class="glyphicon glyphicon-envelope"></span>
                         消息
-                        <span class="badge" style="background-color: #D94600;">notification_count</span>
+                        <span class="badge" style="background-color: #D94600;">{{notification_count}}</span>
                         </a></li>
-                    <li><a id="logout" href="javascript:;">
+                       <li><a id="logout" href="javascript:;">
                         <span class="glyphicon glyphicon-log-out"></span>
                         退出</a></li>
                 </ul>

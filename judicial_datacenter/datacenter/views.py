@@ -29,6 +29,8 @@ class BaseMixin(object):
 class IndexView(BaseMixin,ListView):
     template_name = "datacenter/index.html"
     context_object_name = "model_list"
+    paginate_by = 10
+    #logger.info("datacenter/index.html")
 
     def get_context_data(self, **kwargs):
         kwargs['carousel_page_list'] = ["page_1","page_2","page_3"]
