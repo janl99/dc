@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'datacenter',
     'archives',
     'mptt',
+    'rest_framework',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -87,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'judicial_datacenter',
         'USER': 'root',
-        'PASSWORD': 'uj81u1',
+        'PASSWORD': 'shanlitech.com',
     }
 }
 
@@ -206,3 +207,12 @@ STATIC_DIRS = [
 
 WEBSITE_TITLE = u'DataCenter'
 WEBSITE_WELCOME = u'欢迎访问河北省司法厅数据中心'
+
+
+REST_FRAMEWORK = {
+  # Use Django's standard `django.contrib.auth` permissions,
+  # or allow read-only access for unauthenticated users.
+  'DEFAULT_PERMISSION_CLASSES': [
+     'rest_framework.permissions.IsAuthenticated'
+  ]
+}

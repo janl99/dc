@@ -17,8 +17,11 @@ from django.conf.urls import url,include
 from django.contrib import admin
 from django.core.urlresolvers import reverse
 
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'',include('datacenter.urls')),
     url(r'',include('datacenter_auth.urls')),
+    url(r'',include('archives.urls')),
+    url(r'api-auth/',include('rest_framework.urls',namespace='rest_framework')),
 ]

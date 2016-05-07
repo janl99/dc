@@ -1,13 +1,44 @@
 {% extends "./datacenter/base.html" %}
 
 {%block main%}
-<div class="row" >
-    <div id = "datacenter-content" class = "col-md-8 col-lg-9">
-       <!-- alert box -->
-       <div class = "well alert hidden-xs fade in">
-          <button class = "close" data-dismiss = "alert" type = "button">&times;</button>
-          {{website_welcome}}
-       </div>
-    </div>
+<script src = "/static/js/jquery.gridster.min.js" type ="text/javascript" charset="utf-8"></script>
+<script src = "/static/js/echarts.min.js" type = "text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/jquery.gridster.css">
+<div class="gridster">
+  <ul>
+    <li data-row="1" data-col="1" data-sizex="29" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:850px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/included_monitoring_count_year_chart_panel.html" %}</div></li>
+    <li data-row="1" data-col="30" data-sizex="9" data-sizey="8">{% include "./datacenter/widgets/tags_cloud.html" %}</li>
+    <li data-row="9" data-col="1" data-sizex="26" data-sizey="6">2</li>
+    <li data-row="9" data-col="27" data-sizex="6" data-sizey="6">3</li>
+    <li data-row="9" data-col="33" data-sizex="6" data-sizey="6">4</li>
+    <li data-row="15" data-col="1" data-sizex="3" data-sizey="2">5</li>
+    <li data-row="15" data-col="4" data-sizex="4" data-sizey="2">6</li>
+    <li data-row="15" data-col="8" data-sizex="3" data-sizey="2">7</li>
+    <li data-row="15" data-col="13" data-sizex="7" data-sizey="3">8</li>
+    <li data-row="17" data-col="7" data-sizex="3" data-sizey="3">9</li>
+  </ul>
 </div>
+<div id = "log"></div>
+<script type="text/javascript">
+  var gridster;
+  $(function(){
+    var log = document.getElementById('log');
+    gridster = $(".gridster ul").gridster({
+      widget_base_dimensions: [20,20],
+      widget_margins: [5, 5],
+      resize: {
+        enabled: true,
+        start: function(e, ui, $widget) {
+         // log.innerHTML = 'START position: ' + ui.position.top +' '+ ui.position.left + "<br >" + log.innerHTML;
+        },
+        resize: function(e, ui, $widget) {
+         // log.innerHTML = 'RESIZE offset: ' + ui.pointer.diff_top +' '+ ui.pointer.diff_left + "<br >" + log.innerHTML;
+        },
+        stop: function(e, ui, $widget) {
+          //log.innerHTML = 'STOP position: ' + ui.position.top +' '+ ui.position.left + "<br >" + log.innerHTML;
+        }
+      }
+   }).data('gridster');
+  });
+</script>
 {% endblock %}
