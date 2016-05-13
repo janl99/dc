@@ -6,39 +6,36 @@
 <link rel="stylesheet" type="text/css" href="/static/css/jquery.gridster.css">
 <div class="gridster">
   <ul>
-    <li data-row="1" data-col="1" data-sizex="29" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:850px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/included_monitoring_count_year_chart_panel.html" %}</div></li>
-    <li data-row="1" data-col="30" data-sizex="9" data-sizey="8">{% include "./datacenter/widgets/tags_cloud.html" %}</li>
-    <li data-row="9" data-col="1" data-sizex="22" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:640px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/included_monitoring_count_area_chart_panel.html" %}</li>
-    <li data-row="9" data-col="23" data-sizex="8" data-sizey="8">3</li>
-    <li data-row="9" data-col="31" data-sizex="8" data-sizey="8">4</li>
-    <li data-row="17" data-col="1" data-sizex="3" data-sizey="2">5</li>
-    <li data-row="17" data-col="4" data-sizex="4" data-sizey="2">6</li>
-    <li data-row="17" data-col="8" data-sizex="3" data-sizey="2">7</li>
-    <li data-row="17" data-col="13" data-sizex="7" data-sizey="3">8</li>
-    <li data-row="19" data-col="7" data-sizex="3" data-sizey="3">9</li>
+    <li data-row="1" data-col="1" data-sizex="30" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:880px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/included_monitoring_count_year_chart_panel.html" %}</div></li>
+    <li data-row="1" data-col="31" data-sizex="8" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:220px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/service_platform_count_chart_panel.html" %}</div></li>
+    <li data-row="9" data-col="9" data-sizex="22" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:640px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/included_monitoring_count_area_chart_panel.html" %}</div></li>
+    <li data-row="9" data-col="1" data-sizex="8" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:220px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/area_count_chart_panel.html" %}</div></li>
+    <li data-row="9" data-col="31" data-sizex="8" data-sizey="11"><div style = "background-color:rgba(255,255,255,0.9);width:220px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/data_transfer_chart_panel.html" %}</div></li>
+  <li data-row="17" data-col="1" data-sizex="30" data-sizey="11"><div style = "background-color:rgba(255,255,255,0.9);width:880px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/join_leave_count_chart_panel.html" %}</div></li>
+  <li data-row="20" data-col="31" data-sizex="8" data-sizey="8"><div style = "background-color:rgba(255,255,255,0.9);width:220px;border-radius:4px;margin:0 auto;">{% include "./datacenter/widgets/area_join_leave_count_chart_panel.html" %}</div></li>
   </ul>
 </div>
 <div id = "log"></div>
 <script type="text/javascript">
   var gridster;
   $(function(){
-    var log = document.getElementById('log');
-    gridster = $(".gridster ul").gridster({
-      widget_base_dimensions: [20,20],
-      widget_margins: [5, 5],
-      resize: {
-        enabled: true,
-        start: function(e, ui, $widget) {
-         // log.innerHTML = 'START position: ' + ui.position.top +' '+ ui.position.left + "<br >" + log.innerHTML;
-        },
-        resize: function(e, ui, $widget) {
-         // log.innerHTML = 'RESIZE offset: ' + ui.pointer.diff_top +' '+ ui.pointer.diff_left + "<br >" + log.innerHTML;
-        },
-        stop: function(e, ui, $widget) {
-          //log.innerHTML = 'STOP position: ' + ui.position.top +' '+ ui.position.left + "<br >" + log.innerHTML;
-        }
-      }
-   }).data('gridster');
-  });
-</script>
+      var log = document.getElementById('log');
+      gridster = $(".gridster ul").gridster({
+widget_base_dimensions: [20,20],
+widget_margins: [5, 5],
+resize: {
+enabled: true,
+start: function(e, ui, $widget) {
+// log.innerHTML = 'START position: ' + ui.position.top +' '+ ui.position.left + "<br >" + log.innerHTML;
+},
+resize: function(e, ui, $widget) {
+// log.innerHTML = 'RESIZE offset: ' + ui.pointer.diff_top +' '+ ui.pointer.diff_left + "<br >" + log.innerHTML;
+},
+stop: function(e, ui, $widget) {
+//log.innerHTML = 'STOP position: ' + ui.position.top +' '+ ui.position.left + "<br >" + log.innerHTML;
+}
+}
+}).data('gridster');
+      });
+    </script>
 {% endblock %}
