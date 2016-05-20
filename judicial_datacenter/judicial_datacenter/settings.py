@@ -115,7 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'zh-hans'
+LANGUAGE_CODE = 'zh-cn'
 
 TIME_ZONE = 'Asia/Shanghai'
 
@@ -214,5 +214,7 @@ REST_FRAMEWORK = {
   # or allow read-only access for unauthenticated users.
   'DEFAULT_PERMISSION_CLASSES': [
      'rest_framework.permissions.IsAuthenticated'
-  ]
+  ],
+  'DEFAULT_PARSER_CLASSES':('rest_framework_xml.parsers.XMLParser',),
+  'DEFAULT_RENDERER_CLASSES':('rest_framework_xml.renderers.XMLRenderer',),
 }
