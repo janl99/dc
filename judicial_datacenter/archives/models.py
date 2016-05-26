@@ -25,7 +25,6 @@ class XZQH(MPTTModel):
   class MPTTMeta:
     order_insertion_by = ['code']
 
-
 # ref SF 05001-2013 unit 8.2 机构类别
 class JGLB(MPTTModel):
   code = models.CharField(max_length=4,verbose_name="编码")
@@ -42,7 +41,6 @@ class JGLB(MPTTModel):
 
   class MPTTMeta:
     order_insertion_by = ['code']
-
 
 # ref SF 05001-2013 unit 8.3 机构隶属层级
 class JGLSCJ(models.Model):

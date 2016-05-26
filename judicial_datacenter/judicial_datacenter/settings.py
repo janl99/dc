@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
+    'django_cron',
     'bootstrap3',
     'datacenter_auth',
     'datacenter',
@@ -215,6 +216,10 @@ REST_FRAMEWORK = {
   'DEFAULT_PERMISSION_CLASSES': [
      'rest_framework.permissions.IsAuthenticated'
   ],
-  'DEFAULT_PARSER_CLASSES':('rest_framework_xml.parsers.XMLParser',),
-  'DEFAULT_RENDERER_CLASSES':('rest_framework_xml.renderers.XMLRenderer',),
+  #'DEFAULT_PARSER_CLASSES':('rest_framework_xml.parsers.XMLParser',),
+  #'DEFAULT_RENDERER_CLASSES':('rest_framework_xml.renderers.XMLRenderer',),
 }
+
+CRON_CLASSES=[
+    "cronjob.cron.DataChangedNotifcationJob",
+]
